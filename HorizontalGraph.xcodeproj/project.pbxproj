@@ -12,6 +12,8 @@
 		7FB761B0222984550038842F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB761AE222984550038842F /* Main.storyboard */; };
 		7FB761B2222984580038842F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FB761B1222984580038842F /* Assets.xcassets */; };
 		7FB761B5222984580038842F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB761B3222984580038842F /* LaunchScreen.storyboard */; };
+		7FB761C1222984EE0038842F /* HorizontalGraph.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB761C0222984EE0038842F /* HorizontalGraph.xib */; };
+		7FB761C3222985990038842F /* HorizontalGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB761C2222985990038842F /* HorizontalGraph.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		7FB761B1222984580038842F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FB761B4222984580038842F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FB761B6222984580038842F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FB761C0222984EE0038842F /* HorizontalGraph.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalGraph.xib; sourceTree = "<group>"; };
+		7FB761C2222985990038842F /* HorizontalGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,48 @@
 		7FB761A9222984550038842F /* HorizontalGraph */ = {
 			isa = PBXGroup;
 			children = (
-				7FB761AA222984550038842F /* AppDelegate.swift */,
-				7FB761AC222984550038842F /* ViewController.swift */,
-				7FB761AE222984550038842F /* Main.storyboard */,
+				7FB761BF222984940038842F /* Horizontal Graph */,
+				7FB761BE222984870038842F /* Controllers */,
+				7FB761BD222984720038842F /* User Interface */,
+				7FB761BC222984600038842F /* Root */,
 				7FB761B1222984580038842F /* Assets.xcassets */,
-				7FB761B3222984580038842F /* LaunchScreen.storyboard */,
 				7FB761B6222984580038842F /* Info.plist */,
 			);
 			path = HorizontalGraph;
+			sourceTree = "<group>";
+		};
+		7FB761BC222984600038842F /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				7FB761AA222984550038842F /* AppDelegate.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		7FB761BD222984720038842F /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				7FB761AE222984550038842F /* Main.storyboard */,
+				7FB761B3222984580038842F /* LaunchScreen.storyboard */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		7FB761BE222984870038842F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7FB761AC222984550038842F /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7FB761BF222984940038842F /* Horizontal Graph */ = {
+			isa = PBXGroup;
+			children = (
+				7FB761C0222984EE0038842F /* HorizontalGraph.xib */,
+				7FB761C2222985990038842F /* HorizontalGraph.swift */,
+			);
+			path = "Horizontal Graph";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FB761C1222984EE0038842F /* HorizontalGraph.xib in Resources */,
 				7FB761B5222984580038842F /* LaunchScreen.storyboard in Resources */,
 				7FB761B2222984580038842F /* Assets.xcassets in Resources */,
 				7FB761B0222984550038842F /* Main.storyboard in Resources */,
@@ -137,6 +176,7 @@
 			files = (
 				7FB761AD222984550038842F /* ViewController.swift in Sources */,
 				7FB761AB222984550038842F /* AppDelegate.swift in Sources */,
+				7FB761C3222985990038842F /* HorizontalGraph.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
