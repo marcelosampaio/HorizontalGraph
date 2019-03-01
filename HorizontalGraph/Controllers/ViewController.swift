@@ -21,8 +21,17 @@ class ViewController: UIViewController {
         self.horizontalGraph.layer.borderColor = UIColor.black.cgColor
         self.horizontalGraph.layer.borderWidth = 1.5
         
+        // left graph
         self.horizontalGraph.leftGraphColor(UIColor.green)
-        self.horizontalGraph.lefGraphConstraints(leading: 0, trailing: self.horizontalGraph.bounds.width / 2.00)
+        self.horizontalGraph.leftGraphConstraints(leading: 0, trailing: self.horizontalGraph.bounds.width)
+        
+        // center graph
+//        self.horizontalGraph.centerGraphColor(UIColor.yellow)
+//        self.horizontalGraph.centerGraphConstraints(leading: self.horizontalGraph.bounds.width, trailing: 0)
+//
+//        // right graph
+//        self.horizontalGraph.rightGraphColor(UIColor.brown)
+//        self.horizontalGraph.rightGraphConstraints(leading:40.0, trailing: 60.0)
         
     }
 

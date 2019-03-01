@@ -12,9 +12,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HorizontalGraph" customModule="HorizontalGraph" customModuleProvider="target">
             <connections>
+                <outlet property="centerGraphLeadingConstraint" destination="2FM-Pf-owD" id="lB7-ul-5bO"/>
+                <outlet property="centerGraphTrailingConstraint" destination="CKE-AD-O6M" id="Ddw-q6-npc"/>
+                <outlet property="centerGraphView" destination="222-sV-vwg" id="Smo-1k-y99"/>
                 <outlet property="leftGraphLeadingConstraint" destination="Bts-xR-4Eg" id="nFI-Tn-n7g"/>
                 <outlet property="leftGraphTrailingConstraint" destination="R8N-94-BwL" id="zrk-OZ-rCw"/>
                 <outlet property="leftGraphView" destination="za3-Js-eh8" id="6Dt-vX-Ufy"/>
+                <outlet property="rightGraphLeadingConstraint" destination="hXN-wj-oJm" id="5VZ-Hv-q4Q"/>
+                <outlet property="rightGraphTrailingConstraint" destination="iXS-Wc-zHa" id="xP5-5d-Sbg"/>
+                <outlet property="rightGraphView" destination="SEw-rR-3c6" id="Na6-k8-WC4"/>
                 <outlet property="view" destination="iN0-l3-epB" id="9bm-9t-Q6g"/>
             </connections>
         </placeholder>
@@ -24,15 +30,31 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="za3-Js-eh8">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="10" y="0.0" width="133" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="222-sV-vwg">
+                    <rect key="frame" x="145" y="0.0" width="85" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEw-rR-3c6">
+                    <rect key="frame" x="232" y="0.0" width="143" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="za3-Js-eh8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Bts-xR-4Eg"/>
-                <constraint firstAttribute="trailing" secondItem="za3-Js-eh8" secondAttribute="trailing" id="R8N-94-BwL"/>
+                <constraint firstItem="222-sV-vwg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="145" id="2FM-Pf-owD"/>
+                <constraint firstItem="za3-Js-eh8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="Bts-xR-4Eg"/>
+                <constraint firstAttribute="trailing" secondItem="222-sV-vwg" secondAttribute="trailing" constant="145" id="CKE-AD-O6M"/>
+                <constraint firstAttribute="trailing" secondItem="za3-Js-eh8" secondAttribute="trailing" constant="232" id="R8N-94-BwL"/>
+                <constraint firstItem="SEw-rR-3c6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="TuK-hn-GJF"/>
                 <constraint firstItem="za3-Js-eh8" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="cos-Pt-6RY"/>
+                <constraint firstItem="SEw-rR-3c6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="232" id="hXN-wj-oJm"/>
+                <constraint firstAttribute="trailing" secondItem="SEw-rR-3c6" secondAttribute="trailing" id="iXS-Wc-zHa"/>
+                <constraint firstItem="222-sV-vwg" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="mIr-mE-807"/>
+                <constraint firstItem="222-sV-vwg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="mbe-BH-YTB"/>
+                <constraint firstItem="SEw-rR-3c6" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="rSG-4U-b2K"/>
                 <constraint firstItem="za3-Js-eh8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="zE2-es-U8e"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

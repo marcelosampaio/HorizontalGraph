@@ -15,12 +15,21 @@ class HorizontalGraph: UIView {
     
     // left graph
     @IBOutlet weak var leftGraphView: UIView!
+    @IBOutlet weak var centerGraphView: UIView!
+    @IBOutlet weak var rightGraphView: UIView!
     
     // left graph constraints
     @IBOutlet weak var leftGraphLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var leftGraphTrailingConstraint: NSLayoutConstraint!
     
-
+    // center graph constraints
+    @IBOutlet weak var centerGraphLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var centerGraphTrailingConstraint: NSLayoutConstraint!
+    
+    // right graph constraints
+    @IBOutlet weak var rightGraphLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var rightGraphTrailingConstraint: NSLayoutConstraint!
+    
     // MARK: - Constructor
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -35,10 +44,27 @@ class HorizontalGraph: UIView {
     public func leftGraphColor(_ color: UIColor) {
         self.leftGraphView.backgroundColor = color
     }
-    public func lefGraphConstraints(leading: CGFloat, trailing: CGFloat) {
+    public func leftGraphConstraints(leading: CGFloat, trailing: CGFloat) {
         self.leftGraphLeadingConstraint.constant = leading
         self.leftGraphTrailingConstraint.constant = trailing
     }
 
+    // MARK: - Center Graph Helper
+    public func centerGraphColor(_ color: UIColor) {
+        self.leftGraphView.backgroundColor = color
+    }
+    public func centerGraphConstraints(leading: CGFloat, trailing: CGFloat) {
+        self.centerGraphLeadingConstraint.constant = leading
+        self.centerGraphTrailingConstraint.constant = trailing
+    }
 
+    // MARK: - Right Graph Helper
+    public func rightGraphColor(_ color: UIColor) {
+        self.leftGraphView.backgroundColor = color
+    }
+    public func rightGraphConstraints(leading: CGFloat, trailing: CGFloat) {
+        self.rightGraphLeadingConstraint.constant = leading
+        self.rightGraphTrailingConstraint.constant = trailing
+    }
+    
 }
