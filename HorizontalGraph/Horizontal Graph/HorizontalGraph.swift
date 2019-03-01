@@ -51,7 +51,7 @@ class HorizontalGraph: UIView {
 
     // MARK: - Center Graph Helper
     public func centerGraphColor(_ color: UIColor) {
-        self.leftGraphView.backgroundColor = color
+        self.centerGraphView.backgroundColor = color
     }
     public func centerGraphConstraints(leading: CGFloat, trailing: CGFloat) {
         self.centerGraphLeadingConstraint.constant = leading
@@ -60,7 +60,7 @@ class HorizontalGraph: UIView {
 
     // MARK: - Right Graph Helper
     public func rightGraphColor(_ color: UIColor) {
-        self.leftGraphView.backgroundColor = color
+        self.rightGraphView.backgroundColor = color
     }
     public func rightGraphConstraints(leading: CGFloat, trailing: CGFloat) {
         self.rightGraphLeadingConstraint.constant = leading

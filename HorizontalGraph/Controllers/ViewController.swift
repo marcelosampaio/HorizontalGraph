@@ -23,15 +23,15 @@ class ViewController: UIViewController {
         
         // left graph
         self.horizontalGraph.leftGraphColor(UIColor.green)
-        self.horizontalGraph.leftGraphConstraints(leading: 0, trailing: self.horizontalGraph.bounds.width)
+        self.horizontalGraph.leftGraphConstraints(leading: 0, trailing: 280)
         
         // center graph
-//        self.horizontalGraph.centerGraphColor(UIColor.yellow)
-//        self.horizontalGraph.centerGraphConstraints(leading: self.horizontalGraph.bounds.width, trailing: 0)
+        self.horizontalGraph.centerGraphColor(UIColor.red)
+        self.horizontalGraph.centerGraphConstraints(leading: self.horizontalGraph.bounds.width - 280, trailing: 0)
 //
 //        // right graph
-//        self.horizontalGraph.rightGraphColor(UIColor.brown)
-//        self.horizontalGraph.rightGraphConstraints(leading:40.0, trailing: 60.0)
+        self.horizontalGraph.rightGraphColor(UIColor.brown)
+        self.horizontalGraph.rightGraphConstraints(leading: 240, trailing: 0)
         
     }
 
