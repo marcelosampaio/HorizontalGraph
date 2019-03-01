@@ -18,7 +18,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // set graph view background color
+        self.horizontalGraph.layer.borderColor = UIColor.black.cgColor
+        self.horizontalGraph.layer.borderWidth = 1.5
+        
         self.horizontalGraph.leftGraphColor(UIColor.green)
+        self.horizontalGraph.lefGraphConstraints(leading: 0, trailing: self.horizontalGraph.bounds.width / 2.00)
         
     }
 

@@ -31,11 +31,14 @@ class HorizontalGraph: UIView {
         view.frame = self.bounds
     }
     
-    // MARK: - Public Methods
+    // MARK: - Left Graph Helper
     public func leftGraphColor(_ color: UIColor) {
         self.leftGraphView.backgroundColor = color
     }
-    
+    public func lefGraphConstraints(leading: CGFloat, trailing: CGFloat) {
+        self.leftGraphLeadingConstraint.constant = leading
+        self.leftGraphTrailingConstraint.constant = trailing
+    }
 
 
 }
