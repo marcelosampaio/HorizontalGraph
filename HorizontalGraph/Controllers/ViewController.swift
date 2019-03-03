@@ -70,9 +70,9 @@ class ViewController: UIViewController {
     // MARK: - Rotation Helper
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         
-        coordinator.animate(alongsideTransition: { (context) in
-            // animator
-        }) { (transitionContext) in
+        coordinator.animate(alongsideTransition: { (coordinatorContext) in
+            // coordinator transition
+        }) { (completionContext) in
             // completion
             print("🅰️")
 
