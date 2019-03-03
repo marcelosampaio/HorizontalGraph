@@ -74,8 +74,6 @@ class ViewController: UIViewController {
             // coordinator transition
         }) { (completionContext) in
             // completion
-            print("🅰️")
-
             self.constraintHelper()
             self.horizontalGraph.setNeedsUpdateConstraints()
 
