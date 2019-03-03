@@ -17,21 +17,17 @@ class ViewController: UIViewController {
     private var graphLeftValue : CGFloat = 10.00
     private var graphCenterValue : CGFloat = 30.00
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        self.constraintHelper(valueLeft: self.graphLeftValue, valueCenter: self.graphCenterValue)
-        
-        
+        self.configHorizontalGraph(valueLeft: self.graphLeftValue, valueCenter: self.graphCenterValue)
     }
     
     // MARK: - Constraints Helper
-    private func constraintHelper(valueLeft: CGFloat, valueCenter: CGFloat) {
+    private func configHorizontalGraph(valueLeft: CGFloat, valueCenter: CGFloat) {
         
         // left values
         let sizeLeft : CGFloat = (valueLeft * self.horizontalGraph.bounds.width) / 100.00
@@ -58,9 +54,7 @@ class ViewController: UIViewController {
         // right graph
         self.horizontalGraph.rightGraphColor(UIColor.green)
         self.horizontalGraph.rightGraphConstraints(leading: leadingRight, trailing: trailingRight)
-        
 
-//        self.horizontalGraph.layoutIfNeeded()
     }
 
     
@@ -71,7 +65,7 @@ class ViewController: UIViewController {
             // coordinator transition
         }) { (completionContext) in
             // completion
-            self.constraintHelper(valueLeft: self.graphLeftValue, valueCenter: self.graphCenterValue)
+            self.configHorizontalGraph(valueLeft: self.graphLeftValue, valueCenter: self.graphCenterValue)
             self.horizontalGraph.setNeedsUpdateConstraints()
 
         }
