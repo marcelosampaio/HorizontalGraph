@@ -21,9 +21,16 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        constraintHelper()
+        
+        
+    }
+    
+    // MARK: - Constraints Helper
+    private func constraintHelper() {
         // set graph view background color
-//        self.horizontalGraph.layer.borderColor = UIColor.black.cgColor
-//        self.horizontalGraph.layer.borderWidth = 1.5
+        //        self.horizontalGraph.layer.borderColor = UIColor.black.cgColor
+        //        self.horizontalGraph.layer.borderWidth = 1.5
         
         // left value
         let valueLeft : CGFloat = 80.00      // 50%
@@ -59,5 +66,21 @@ class ViewController: UIViewController {
         self.horizontalGraph.layoutIfNeeded()
     }
 
+    
+    // MARK: - Rotation Helper
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        
+        coordinator.animate(alongsideTransition: { (context) in
+            // animator
+        }) { (transitionContext) in
+            // completion
+            print("🅰️")
+
+            self.constraintHelper()
+            self.horizontalGraph.setNeedsUpdateConstraints()
+
+        }
+        
+    }
 }
 
