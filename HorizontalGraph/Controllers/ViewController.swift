@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var horizontalGraph: HorizontalGraph!
     
+    // Graph Values
+    private var graphLeftValue : CGFloat = 10.00
+    private var graphCenterValue : CGFloat = 30.00
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,49 +25,42 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        constraintHelper()
+        self.constraintHelper(valueLeft: self.graphLeftValue, valueCenter: self.graphCenterValue)
         
         
     }
     
     // MARK: - Constraints Helper
-    private func constraintHelper() {
-        // set graph view background color
-        //        self.horizontalGraph.layer.borderColor = UIColor.black.cgColor
-        //        self.horizontalGraph.layer.borderWidth = 1.5
+    private func constraintHelper(valueLeft: CGFloat, valueCenter: CGFloat) {
         
-        // left value
-        let valueLeft : CGFloat = 80.00      // 50%
+        // left values
         let sizeLeft : CGFloat = (valueLeft * self.horizontalGraph.bounds.width) / 100.00
         let leadingLeft : CGFloat = 0.00
         let trailingLeft : CGFloat = 0.00
         
-        // center value
-        let valueCenter : CGFloat = 10.00      // 20%
+        // center values
         let sizeCenter : CGFloat = (valueCenter * self.horizontalGraph.bounds.width) / 100.00
         let leadingCenter : CGFloat = sizeLeft
         let trailingCenter : CGFloat = 0
-        
-        
-        // right value
+
+        // right values
         let leadingRight : CGFloat = sizeLeft + sizeCenter
         let trailingRight : CGFloat = 0
         
         // left graph
-        self.horizontalGraph.leftGraphColor(UIColor.green)
+        self.horizontalGraph.leftGraphColor(UIColor.red)
         self.horizontalGraph.leftGraphConstraints(leading: leadingLeft, trailing: trailingLeft)
         
         // center graph
-        self.horizontalGraph.centerGraphColor(UIColor.red)
+        self.horizontalGraph.centerGraphColor(UIColor.yellow)
         self.horizontalGraph.centerGraphConstraints(leading: leadingCenter, trailing: trailingCenter)
         
         // right graph
-        self.horizontalGraph.rightGraphColor(UIColor.brown)
+        self.horizontalGraph.rightGraphColor(UIColor.green)
         self.horizontalGraph.rightGraphConstraints(leading: leadingRight, trailing: trailingRight)
         
-        
-        
-        self.horizontalGraph.layoutIfNeeded()
+
+//        self.horizontalGraph.layoutIfNeeded()
     }
 
     
@@ -74,7 +71,7 @@ class ViewController: UIViewController {
             // coordinator transition
         }) { (completionContext) in
             // completion
-            self.constraintHelper()
+            self.constraintHelper(valueLeft: self.graphLeftValue, valueCenter: self.graphCenterValue)
             self.horizontalGraph.setNeedsUpdateConstraints()
 
         }
