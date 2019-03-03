@@ -22,17 +22,17 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         
         // set graph view background color
-        self.horizontalGraph.layer.borderColor = UIColor.black.cgColor
-        self.horizontalGraph.layer.borderWidth = 1.5
+//        self.horizontalGraph.layer.borderColor = UIColor.black.cgColor
+//        self.horizontalGraph.layer.borderWidth = 1.5
         
         // left value
-        let valueLeft : CGFloat = 33.33      // 50%
+        let valueLeft : CGFloat = 80.00      // 50%
         let sizeLeft : CGFloat = (valueLeft * self.horizontalGraph.bounds.width) / 100.00
         let leadingLeft : CGFloat = 0.00
         let trailingLeft : CGFloat = 0.00
         
         // center value
-        let valueCenter : CGFloat = 33.33      // 20%
+        let valueCenter : CGFloat = 10.00      // 20%
         let sizeCenter : CGFloat = (valueCenter * self.horizontalGraph.bounds.width) / 100.00
         let leadingCenter : CGFloat = sizeLeft
         let trailingCenter : CGFloat = 0
